@@ -44,19 +44,19 @@ battery 1 {
 }
 
 disk "/" {
-        format = "DISK %avail"
+        format = " %avail"
 }
 
 load {
-        format = "CPU %1min"
+        format = "󰘚 %1min"
 }
 
 memory {
-        format = "RAM %used ~ %available"
+        format = "  %used ~ %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
 
 tztime detroit {
-        format = "%a, %b-%y %I:%M %p "
+        format = " %a, %b-%y  %I:%M %p "
 }
