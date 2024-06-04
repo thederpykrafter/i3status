@@ -20,7 +20,7 @@ order += "battery all"
 order += "disk /"
 order += "load"
 order += "memory"
-order += "tztime local"
+order += "tztime detroit"
 
 wireless _first_ {
         format_up = "W: (%essid %quality) %ip (%bitrate)"
@@ -50,6 +50,6 @@ memory {
         format_degraded = "MEMORY < %available"
 }
 
-tztime local {
+tztime detroit {
         format = "%a, %b-%y %I:%M %p "
 }
