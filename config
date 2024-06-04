@@ -16,24 +16,31 @@ general {
 
 order += "wireless _first_"
 order += "ethernet _first_"
-order += "battery all"
+order += "battery 1"
 order += "disk /"
 order += "load"
 order += "memory"
 order += "tztime detroit"
 
 wireless _first_ {
-        format_up = "W: (%essid %quality) %ip (%bitrate)"
-        format_down = "W: ~"
+        format_up = "󰖩 (%essid %quality) %ip (%bitrate)"
+        format_down = "󱚵 "
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: ~"
+        format_up = "󰈁 %ip (%speed)"
+        format_down = "󰈂 "
 }
 
-battery all {
+battery 1 {
         format = "%status %percentage %remaining"
+        format_down = "󱃍"
+        status_chr = "󰚥"
+        status_bat = "󱟟"
+        status_full = "󰂏"
+        path = "/sys/class/power_supply/BAT1/uevent"
+        low_threshold = 10
+        last_full_capacity = true
 }
 
 disk "/" {
