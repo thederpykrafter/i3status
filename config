@@ -16,6 +16,7 @@ general {
 
 order += "wireless _first_"
 order += "ethernet _first_"
+order += "volume master"
 order += "battery 1"
 order += "disk /"
 order += "load"
@@ -30,6 +31,12 @@ wireless _first_ {
 ethernet _first_ {
         format_up = "󰈁 %ip (%speed)"
         format_down = "󰈂 "
+}
+
+volume master {
+  format = "󱄠 %volume"
+  format_muted = "󰝟 0%%"
+  device = "pulse"
 }
 
 battery 1 {
@@ -58,5 +65,5 @@ memory {
 }
 
 tztime detroit {
-        format = " %a, %b-%y  %I:%M %p "
+        format = " %a, %b-%y  %I:%M%p "
 }
